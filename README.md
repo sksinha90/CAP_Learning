@@ -135,3 +135,4 @@ Domain models capture and conceptually define the specific entities of a domain.
   ```
   cds run
   ```
+ The service is running on http://localhost:4004.

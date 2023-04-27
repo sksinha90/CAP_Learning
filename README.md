@@ -23,3 +23,9 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
+
+
+## Steps to create CAPM Project
+1.  cds init - Create an initial CAP project 
+2.  npm install - install all the dependencies
+3.  create the files in the respective folder

@@ -2,17 +2,23 @@ namespace usr;
 
 type Address {
     street : String(100);
-    city   : String(20);
-    state  : String(10);
-    zip    : String(6);
+    city   : String(100);
+    state  : String(100);
+    zip    : String(10);
 }
+type  Gender : String enum {
+    Male;
+    Female;
+    Other;
+};
 
 entity Users {
-    id      : Integer;
+    id      : UUID;
     name    : String(100);
     email   : String(100);
     phone   : String(10);
-    gender: String(10);
+    password: String(100);
+    gender  : Gender;
     address : Address;
     project : Association to Projects;
 }

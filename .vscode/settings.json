@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Sqlite_connection",
+            "database": "${workspaceFolder:CAP_Learning}/db.sqlite"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

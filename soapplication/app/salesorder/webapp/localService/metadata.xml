@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
+        <edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="SalesOrderService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="SalesOrder" EntityType="SalesOrderService.SalesOrder">
+                    <NavigationPropertyBinding Path="soItem" Target="SalesOrderItem"/>
+                </EntitySet>
+                <EntitySet Name="SalesOrderItem" EntityType="SalesOrderService.SalesOrderItem">
+                    <NavigationPropertyBinding Path="salesOrderId" Target="SalesOrder"/>
+                    <NavigationPropertyBinding Path="material" Target="Material"/>
+                </EntitySet>
+                <EntitySet Name="CurrencyKey" EntityType="SalesOrderService.CurrencyKey"/>
+                <EntitySet Name="Material" EntityType="SalesOrderService.Material"/>
+            </EntityContainer>
+            <EntityType Name="SalesOrder">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="salesOrderId" Type="Edm.String" MaxLength="10"/>
+                <Property Name="description" Type="Edm.String" MaxLength="100"/>
+                <Property Name="customer_ID" Type="Edm.Guid"/>
+                <Property Name="salesOrganization" Type="Edm.String" MaxLength="4"/>
+                <Property Name="distributionChannel" Type="Edm.String" MaxLength="4"/>
+                <Property Name="division" Type="Edm.String" MaxLength="4"/>
+                <Property Name="amount" Type="Edm.Decimal" Scale="2" Precision="23"/>
+                <Property Name="currencyKey" Type="Edm.String" MaxLength="3"/>
+                <Property Name="status" Type="Edm.Int32"/>
+                <NavigationProperty Name="soItem" Type="Collection(SalesOrderService.SalesOrderItem)" Partner="salesOrderId">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="SalesOrderItem">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <NavigationProperty Name="salesOrderId" Type="SalesOrderService.SalesOrder" Partner="soItem">
+                    <ReferentialConstraint Property="salesOrderId_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="salesOrderId_ID" Type="Edm.Guid"/>
+                <Property Name="itemId" Type="Edm.String" MaxLength="10"/>
+                <NavigationProperty Name="material" Type="SalesOrderService.Material">
+                    <ReferentialConstraint Property="material_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="material_ID" Type="Edm.Guid"/>
+                <Property Name="materialDescription" Type="Edm.String" MaxLength="100"/>
+                <Property Name="quantity" Type="Edm.String" MaxLength="5"/>
+                <Property Name="quantityUnit" Type="Edm.String" MaxLength="3"/>
+                <Property Name="amount" Type="Edm.Decimal" Scale="2" Precision="23"/>
+                <Property Name="currencyKey" Type="Edm.String" MaxLength="3"/>
+            </EntityType>
+            <EntityType Name="CurrencyKey">
+                <Property Name="code" Type="Edm.String" MaxLength="3"/>
+                <Property Name="currency" Type="Edm.String" MaxLength="50"/>
+            </EntityType>
+            <EntityType Name="Material">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="materialId" Type="Edm.String" MaxLength="10"/>
+                <Property Name="description" Type="Edm.String" MaxLength="100"/>
+                <Property Name="materialUnit_code" Type="Edm.String" MaxLength="3"/>
+                <Property Name="active" Type="Edm.Boolean"/>
+            </EntityType>
+            <Action Name="releaseSalesOrder" IsBound="true">
+                <Parameter Name="in" Type="SalesOrderService.SalesOrderItem"/>
+                <Parameter Name="salesOrderId" Type="Edm.String" MaxLength="10"/>
+            </Action>
+            <Annotations Target="SalesOrderService.SalesOrder/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                </Annotations>
+                <Annotations Target="SalesOrderService.SalesOrder/createdBy">
+                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                    <Annotation Term="Core.Immutable" Bool="true"/>
+                    <Annotation Term="Core.Computed" Bool="true"/>
+                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                        </Annotations>
+                        <Annotations Target="SalesOrderService.SalesOrder/modifiedAt">
+                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                            <Annotation Term="Core.Computed" Bool="true"/>
+                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                            </Annotations>
+                            <Annotations Target="SalesOrderService.SalesOrder/modifiedBy">
+                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                <Annotation Term="Core.Computed" Bool="true"/>
+                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                    </Annotations>
+                                    <Annotations Target="SalesOrderService.SalesOrder/status">
+                                        <Annotation Term="Validation.AllowedValues">
+                                            <Collection>
+                                                <Record Type="Validation.AllowedValue">
+                                                    <Annotation Term="Core.SymbolicName" String="InProcess"/>
+                                                    <PropertyValue Property="Value" Int="1"/>
+                                                </Record>
+                                                <Record Type="Validation.AllowedValue">
+                                                    <Annotation Term="Core.SymbolicName" String="Released"/>
+                                                    <PropertyValue Property="Value" Int="2"/>
+                                                </Record>
+                                            </Collection>
+                                        </Annotation>
+                                    </Annotations>
+                                    <Annotations Target="SalesOrderService.SalesOrderItem/createdAt">
+                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                        </Annotations>
+                                        <Annotations Target="SalesOrderService.SalesOrderItem/createdBy">
+                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                </Annotations>
+                                                <Annotations Target="SalesOrderService.SalesOrderItem/modifiedAt">
+                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                    </Annotations>
+                                                    <Annotations Target="SalesOrderService.SalesOrderItem/modifiedBy">
+                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                            </Annotations>
+                                                            <Annotations Target="SalesOrderService.Material/createdAt">
+                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                </Annotations>
+                                                                <Annotations Target="SalesOrderService.Material/createdBy">
+                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                        </Annotations>
+                                                                        <Annotations Target="SalesOrderService.Material/modifiedAt">
+                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                            </Annotations>
+                                                                            <Annotations Target="SalesOrderService.Material/modifiedBy">
+                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                    </Annotations>
+                                                                                </Schema>
+                                                                            </edmx:DataServices>
+                                                                        </edmx:Edmx>

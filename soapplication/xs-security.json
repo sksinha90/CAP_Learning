@@ -1,0 +1,54 @@
+{
+ "xsappname": "soapplication",
+ "tenant-mode": "dedicated",
+ "scopes": [
+  {
+   "name": "$XSAPPNAME.Admin",
+   "description": "Administrator"
+  },
+  {
+   "name": "$XSAPPNAME.Viewer",
+   "description": "Viewer"
+  }
+ ],
+ "attributes": [],
+ "role-templates": [
+  {
+   "name": "Admin",
+   "description": "Administrator",
+   "scope-references": [
+    "$XSAPPNAME.Admin"
+   ]
+  },
+  {
+   "name": "Viewer",
+   "description": "Viewer",
+   "scope-references": [
+    "$XSAPPNAME.Viewer"
+   ]
+  }
+ ],
+ "role-collections": [
+  {
+   "name": "so_Admin",
+   "description": "so Admin",
+   "role-template-references": [
+    "$XSAPPNAME.Admin",
+    "$XSAPPNAME.Viewer"
+   ]
+  },
+  {
+   "name": "so_Viewer",
+   "description": "so Viewer",
+   "role-template-references": [
+    "$XSAPPNAME.Viewer"
+   ]
+  }
+ ],
+ "oauth2-configuration": {
+  "token-validity": 3600,
+  "redirect-uris":[
+    "https://da472852trial-dev-soapplication-approuter.cfapps.us10-001.hana.ondemand.com/login/callback"
+  ]
+ }
+}

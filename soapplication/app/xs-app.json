@@ -1,0 +1,32 @@
+{
+  "welcomeFile": "./index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/odata/v4/customer/(.*)$",
+      "target": "/odata/v4/customer/$1",
+      "authenticationType": "xsuaa",
+      "destination": "srv-api",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/odata/v4/material/(.*)$",
+      "target": "/odata/v4/material/$1",
+      "authenticationType": "xsuaa",
+      "destination": "srv-api",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/odata/v4/salesorder/(.*)$",
+      "target": "/odata/v4/salesorder/$1",
+      "authenticationType": "xsuaa",
+      "destination": "srv-api",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/(.*)$",
+      "authenticationType": "xsuaa",
+      "localDir": "."
+    }
+  ]
+}

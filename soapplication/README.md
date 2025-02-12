@@ -65,3 +65,5 @@ Step 6: Deploy the project to hana
 
 Step 7: Create the `default-env.json` file in root directory of the project
         Copy the `VCAP_SERVICES` created above and copy and add the `db-key` created for db service in  `credential` section. 
+
+Step 8: 

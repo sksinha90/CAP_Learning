@@ -5,7 +5,7 @@ class CFService extends cds.ApplicationService {
 
         this.on('getApplications', async (req) =>{
 
-            
+         console.log('Inside get Applications');   
         })
 
         return super.init();

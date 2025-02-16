@@ -23,3 +23,11 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
+
+## Steps to create Project
+
+# Step 1: 
+Execute the command `cds init bookshop`, then project will get created with below empty folder
+![alt text](image.png)
+
+

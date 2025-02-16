@@ -32,4 +32,15 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
  
 ![image](https://github.com/user-attachments/assets/da651397-f482-4ec5-b5f1-70dee347ff04)
 
+## Step 2
+ Create a file in `db` and `srv` folder and add the code as below screen shot. (Here creating database and service file)
+
+ ![image](https://github.com/user-attachments/assets/47845ae6-c17f-4be8-9ccc-938ef2ad0309)
+
+Execute the application `npm start'
+
+![image](https://github.com/user-attachments/assets/c178c173-49ec-4c23-83a8-d1883cf3abc0)  ![image](https://github.com/user-attachments/assets/4e1fa4fb-0380-46d0-b814-af5d4f43948b)
+
+
+
 

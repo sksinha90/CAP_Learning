@@ -134,7 +134,7 @@ Metadata of entity `Authors`
 
 ![image](https://github.com/user-attachments/assets/a57b021a-c1b0-4ce8-9f37-30295882d55e)
 
-## Step 10: Different Way to use Namespaces.
+## Step 10: Different Way to use Namespaces and other Service.
 
 1. ![image](https://github.com/user-attachments/assets/0dd7d86c-3a98-4d71-8ff7-fcfcfb513a84)
 
@@ -143,6 +143,14 @@ Metadata of entity `Authors`
 3. ![image](https://github.com/user-attachments/assets/f570ea4d-85c5-4c55-a70d-bf51289a2bc0)
 
 4. ![image](https://github.com/user-attachments/assets/c7d91d96-b47a-4ee2-8ab1-16fd1b4068a8)
+
+Other Service
+
+![image](https://github.com/user-attachments/assets/8e475fde-313e-4d2b-9aac-50068b29b2af)
+
+
+![image](https://github.com/user-attachments/assets/f1e4d9d4-527c-4abd-802a-fb2ce4b8b770)
+
 
 
 

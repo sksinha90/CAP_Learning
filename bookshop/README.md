@@ -134,6 +134,20 @@ Metadata of entity `Authors`
 
 ![image](https://github.com/user-attachments/assets/a57b021a-c1b0-4ce8-9f37-30295882d55e)
 
+## Step 10: Different Way to use Namespaces.
+
+1. ![image](https://github.com/user-attachments/assets/0dd7d86c-3a98-4d71-8ff7-fcfcfb513a84)
+
+2. ![image](https://github.com/user-attachments/assets/4454a8a5-6c88-428b-a6ec-d2f6898b7a86)
+
+3. ![image](https://github.com/user-attachments/assets/f570ea4d-85c5-4c55-a70d-bf51289a2bc0)
+
+4. ![image](https://github.com/user-attachments/assets/c7d91d96-b47a-4ee2-8ab1-16fd1b4068a8)
+
+
+
+
+
 
 
 

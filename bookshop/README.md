@@ -101,6 +101,23 @@ Execute the application `npm start` or `cds watch`
 
 ![image](https://github.com/user-attachments/assets/281b1683-0d33-4129-8296-7985e8aeb4f4)
 
+## Step 6: Add sample data to the entity through `csv` file.
+
+Add the content into the respective file and execuete command `cds compile` then data will fetched from csv file and inserted into the table.
+
+![image](https://github.com/user-attachments/assets/e2566432-f4ca-4918-bbdf-a0d5030299c0)
+
+
+![image](https://github.com/user-attachments/assets/afc3edf0-92a2-4589-9c68-ad8d382eea39)
+
+## Step 7: Create a REST file to manipulate data 
+
+Create a file `queries.http` in the root folder of the project.
+
+![image](https://github.com/user-attachments/assets/8d32c7e4-2044-4a59-92b6-9f151a6236ef)
+
+
+
 
 
 

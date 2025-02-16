@@ -116,6 +116,14 @@ Create a file `queries.http` in the root folder of the project.
 
 ![image](https://github.com/user-attachments/assets/8d32c7e4-2044-4a59-92b6-9f151a6236ef)
 
+## Step 8: Adding Common Types and Aspects in the Project.
+
+![image](https://github.com/user-attachments/assets/dc64194d-f4ed-4c10-acca-36b4cc4d8837)
+
+![image](https://github.com/user-attachments/assets/b0601fda-0ecb-4d79-ae15-06924b8ec384)
+
+
+
 
 
 

@@ -122,6 +122,19 @@ Create a file `queries.http` in the root folder of the project.
 
 ![image](https://github.com/user-attachments/assets/b0601fda-0ecb-4d79-ae15-06924b8ec384)
 
+## Step 9: Adding annotations in Services.
+
+![image](https://github.com/user-attachments/assets/9ffafe45-73ad-471b-ba6c-33ad78d5fa56)
+
+Metadata of entity `Books`
+
+![image](https://github.com/user-attachments/assets/b40bc220-3ac9-4ac2-8447-c4a2136304e3)
+
+Metadata of entity `Authors`
+
+![image](https://github.com/user-attachments/assets/a57b021a-c1b0-4ce8-9f37-30295882d55e)
+
+
 
 
 

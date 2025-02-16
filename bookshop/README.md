@@ -152,6 +152,39 @@ Other Service
 ![image](https://github.com/user-attachments/assets/f1e4d9d4-527c-4abd-802a-fb2ce4b8b770)
 
 
+## Step 11: Custom Logic and Debugging.
+
+ 1. Handler file can be defined in 2 ways (as per the below screen shot)
+
+    ![image](https://github.com/user-attachments/assets/597cd1db-fe02-46f7-b7a0-13d51d228fed)
+
+ 2. Defining the handler file (@ different ways)
+
+    ![image](https://github.com/user-attachments/assets/c0f308de-d855-440f-bd25-893055e20c74)
+
+    ![image](https://github.com/user-attachments/assets/93bbb3c4-e385-4af0-b713-f175440ab6a0)
+
+ 3. Creating handler file in project. (`catalog-service.js`).
+
+    ![image](https://github.com/user-attachments/assets/9627bf69-7ded-41fb-880e-4fad4b25cde9)
+
+
+    ![image](https://github.com/user-attachments/assets/896e4b30-4895-4c22-874f-741ba1e78eb5)
+
+ 4. Defining name of handler file other than the name of the Service file (`cat-service.js`).
+
+    ![image](https://github.com/user-attachments/assets/842d21e1-6298-4df7-97de-e72b644980ce)
+
+    ![image](https://github.com/user-attachments/assets/ed4eafb0-72e8-49c2-b744-23230e0a867b)
+
+
+
+
+
+
+
+
+
 
 
 

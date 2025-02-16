@@ -1,0 +1,17 @@
+
+###Get Books
+GET http://localhost:4004/odata/v4/catalog/Books
+
+###Get Authors
+GET http://localhost:4004/odata/v4/catalog/Authors
+
+### Create a new Book
+POST  http://localhost:4004/odata/v4/catalog/Books
+Content-Type: application/json
+
+{
+    "ID": 10,
+    "title": "This is new book by Sachin",
+    "stock": 100,
+    "author_ID": 101
+}

@@ -8,5 +8,13 @@
     // "tab",
     // "tsv"
   ],
-  "SAP HANA Database Explorer.ShowXsAdvancedConnections": true
+  "SAP HANA Database Explorer.ShowXsAdvancedConnections": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "Bookshop SQLite",
+      "database": "${workspaceFolder:bookshop}/bookshop.db"
+    }
+  ]
 }

@@ -25,7 +25,7 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: cfi-db
+      - name: hana-db
       - name: cfi-auth
 
   - name: cfi-db-deployer
@@ -34,14 +34,14 @@ modules:
     parameters:
       buildpack: nodejs_buildpack
     requires:
-      - name: cfi-db
+      - name: hana-db
 
 resources:
-  - name: cfi-db
+  - name: hana-db
     type: com.sap.xs.hdi-container
     parameters:
-      service: hana
-      service-plan: hdi-shared
+      service: hana-cloud-trial
+      service-plan: hana
   - name: cfi-auth
     type: org.cloudfoundry.managed-service
     parameters:

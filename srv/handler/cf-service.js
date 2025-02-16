@@ -11,3 +11,5 @@ class CFService extends cds.ApplicationService {
         return super.init();
     }
 }
+
+module.exports = { CFService };

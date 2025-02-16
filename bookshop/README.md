@@ -50,9 +50,13 @@ Execute the application `npm start` or `cds watch`
 
 1. Add npm package into the project
    ![image](https://github.com/user-attachments/assets/d2e99ccd-83d1-405a-bde8-8599a07ffff4)
+
+
    ![image](https://github.com/user-attachments/assets/ef0e1fae-477b-4518-8499-68aac73b1068)
 
-2. Deploy the project to `sqlite`.
+3. Deploy the project to `sqlite`.
+
+   
    ![image](https://github.com/user-attachments/assets/a4bac547-3f34-46f9-85c7-e69911af4c7a)
 
 ### 3.1 Access database through `sqlite` command

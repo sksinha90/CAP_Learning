@@ -29,6 +29,6 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 ## Step 1: 
  Execute the command `cds init bookshop`, then project will get created with below empty folder
 
- ![alt text](image.png)
+ ![alt text](image-1.png)
 
 

@@ -1,0 +1,28 @@
+###Get Authors
+GET http://localhost:4004/odata/v4/catalog/Authors?$expand=books
+
+
+###Get Books
+GET http://localhost:4004/odata/v4/catalog/Books?$expand=author
+
+
+### Create Author
+POST http://localhost:4004/odata/v4/catalog/Authors
+Content-Type: application/json
+
+{
+    "ID": 4711,
+    "name": "Sachin Kumar"
+}
+
+### Create a new Book
+POST  http://localhost:4004/odata/v4/catalog/Books
+Content-Type: application/json
+
+{
+    "ID": 999,
+    "title": "This is new book by Sachin",
+    "stock": 100,
+    "author_ID": 4711
+}
+

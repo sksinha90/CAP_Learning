@@ -1,0 +1,16 @@
+
+### Get Orders
+GET  http://localhost:4004/odata/v4/catalog/Orders
+
+
+###Create Orders
+POST    http://localhost:4004/odata/v4/catalog/Orders
+Content-Type: application/json
+
+{
+    "book_ID": 201,
+    "quantity": 20
+}
+
+###Get Order Stats
+GET     http://localhost:4004/odata/v4/Stats/OrderInfo

@@ -1,4 +1,4 @@
-# Getting Started
+![image](https://github.com/user-attachments/assets/01cd9b9c-c750-4520-99b7-15cb16e8a219)# Getting Started
 
 Welcome to your new project.
 
@@ -181,6 +181,34 @@ Other Service
 
     ![image](https://github.com/user-attachments/assets/ed4eafb0-72e8-49c2-b744-23230e0a867b)
 
+## Step 12: Add HANA Database into the project.
+
+1. Add the npm package `npm i @sap/hana-client` or `npm add @cap-js/hana` to add the hana package.
+
+   ![image](https://github.com/user-attachments/assets/d4fc2f89-1571-49ae-bb91-18441edac5c5)
+
+2. Execute the command `cds build --for hana` to build the cds file as below screen shot.
+
+   ![image](https://github.com/user-attachments/assets/8d85834b-092a-497d-8765-c9820a2e41b2)
+
+   ![image](https://github.com/user-attachments/assets/b2ad7916-1122-436f-bd66-bcfaea8f98fa)
+
+3. Execute the command `cds add hana --for production` to add the hana database for `procustion` profile.
+
+   ![image](https://github.com/user-attachments/assets/34d79f01-27fd-4007-8a12-97c9fcad94eb)
+
+4. Execute the command `cds deploy --to hana:bookshop-db` to deploy the project and it will create the HDI container service `bookshop-db` in the cockpit. And `deploy` command will do the following as per the below screen shot.
+   
+   ![image](https://github.com/user-attachments/assets/b667600c-c4f7-4093-99b1-c8fd82e9a797)
+
+   ![image](https://github.com/user-attachments/assets/7fad8f8c-6a7b-4885-b11e-95024c76198b)
+
+  
+   ![image](https://github.com/user-attachments/assets/35b967b7-cb24-498a-8ea5-da1ba7ddda5f)
+
+   
+
+   
 
 
 

@@ -220,6 +220,27 @@ Other Service
      ![image](https://github.com/user-attachments/assets/cfb6e85d-caea-4221-9992-61d738a26e51)
 
 
+## Step 14: Add `mta` file into the project.
+
+ 1. Execute the command `cds add mta` then mta file will get added.
+
+    ![image](https://github.com/user-attachments/assets/cb5181a4-4de5-4fda-a41e-329935066204)
+
+## Step 15: Build the project.
+
+  1. execute the command `mbt build` then `mta-archives` forlder will get created on root directoy that contains the `.mtar` file.
+
+     ![image](https://github.com/user-attachments/assets/c865c8dd-dedc-4483-969b-dc4a41bc7292)
+
+
+## Step 16: Deploy the project to cloud foundry.
+
+ 1. Execute the command 'cf deploy mta_archives/bookshop_1.0.0.mtar ` then project will get deploy to cloud foundry.
+
+    
+
+  
+
 
 
 

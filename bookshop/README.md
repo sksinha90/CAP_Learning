@@ -206,6 +206,24 @@ Other Service
   
    ![image](https://github.com/user-attachments/assets/35b967b7-cb24-498a-8ea5-da1ba7ddda5f)
 
+
+## Step 13: Add `XSUAA` into the project.
+
+  1. Execute the command `cds add xsuaa` and below file and dependencies will created as shown in the screen shot.
+     
+     ![image](https://github.com/user-attachments/assets/3e682e50-c755-424d-a1eb-30983eef1456)
+
+     ![image](https://github.com/user-attachments/assets/505da829-45f2-4097-84c1-d79172447127)
+
+  2. Add the below content in `xs-security.json` file.
+
+     ![image](https://github.com/user-attachments/assets/cfb6e85d-caea-4221-9992-61d738a26e51)
+
+
+
+
+
+
    
 
    

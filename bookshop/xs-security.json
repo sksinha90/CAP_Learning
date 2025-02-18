@@ -1,0 +1,37 @@
+{
+  "tenant-mode": "dedicated",
+  "xsappname": "Bookshop",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.read",
+      "description": "Read"
+    },
+    {
+      "name": "$XSAPPNAME.write",
+      "description": "Write"
+    },
+    {
+      "name": "$XSAPPNAME.edit",
+      "description": "Edit"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Admin",
+      "description": "Admin",
+      "scope-references":[
+        "$XSAPPNAME.read",
+        "$XSAPPNAME.write",
+        "$XSAPPNAME.edit"
+      ]
+    },
+    {
+      "name": "Viewer",
+      "description": "Viewer",
+      "scope-references":[
+        "$XSAPPNAME.read"
+      ]
+    }
+  ]
+}
